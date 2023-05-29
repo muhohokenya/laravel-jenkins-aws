@@ -11,6 +11,7 @@ pipeline {
                 '''
             }
         }
+
         stage("Verify SSH connection to server") {
             steps {
                 sshagent(credentials: ['aws-ec2']) {
