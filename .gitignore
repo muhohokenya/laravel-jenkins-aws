@@ -1,0 +1,8 @@
+# Project exclude paths
+/vendor/*
+infra/.terraform
+infra/.terraform.lock.hcl
+infra/*
+infra/ec2-user@ec2-54-236-207-122.compute-1.amazonaws.com
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
