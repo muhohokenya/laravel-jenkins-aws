@@ -12,7 +12,6 @@ pipeline {
             }
         }
 
-
         stage("Verify SSH connection to server") {
             steps {
                 sshagent(['aws']) {
