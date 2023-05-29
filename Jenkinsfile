@@ -14,7 +14,7 @@ pipeline {
 
         stage("Verify SSH connection to server") {
             steps {
-                sshagent(credentials: ['aws-ec2']) {
+                sshagent(credentials: ['aws']) {
                     sh '''
                         ssh -tt -o StrictHostKeyChecking=no ec2-user@44.205.190.83
                     '''
