@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['aws-ec2']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ec2-user@13.40.116.143 whoami
+                        ssh -o StrictHostKeyChecking=no ec2-user@44.205.190.83 whoami
                     '''
                 }
             }
@@ -35,12 +35,12 @@ pipeline {
         stage("Start Docker") {
             steps {
                 sh 'make up'
-                sh 'docker compose ps'
+                sh 'docker-compose ps'
             }
         }
         stage("Run Composer Install") {
             steps {
-                sh 'docker compose run --rm composer install'
+                sh 'docker-compose run --rm composer install'
             }
         }
         stage("Populate .env file") {
