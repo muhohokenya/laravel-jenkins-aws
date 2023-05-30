@@ -36,12 +36,12 @@ pipeline {
 
         stage("Start Docker") {
             steps {
-                sh 'sudo -s docker-compose ps'
+                sh 'sudo -S docker-compose ps'
             }
         }
         stage("Run Composer Install") {
             steps {
-                sh 'sudo docker-compose run --rm composer install'
+                sh 'sudo -S docker-compose run --rm composer install'
             }
         }
     }
