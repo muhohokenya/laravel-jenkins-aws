@@ -13,8 +13,8 @@ pipeline {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ec2-user@44.205.190.83
                     '''
-                }
             }
+                }
         }
 
         //try build
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'sudo -S docker rm -f $(docker ps -a -q)'
+                        sh 'docker rm -f $(docker ps -a -q)'
                     } catch (Exception e) {
                         echo 'No running container to clear up...'
                     }
@@ -38,12 +38,12 @@ pipeline {
 
         stage("Start Docker") {
             steps {
-                sh 'sudo -S docker-compose ps'
+                sh 'docker-compose ps'
             }
         }
         stage("Run Composer Install") {
             steps {
-                sh 'sudo -S docker-compose run --rm composer install'
+                sh 'docker-compose run --rm composer install'
             }
         }
     }
