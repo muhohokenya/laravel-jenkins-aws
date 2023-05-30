@@ -4,7 +4,6 @@ pipeline {
         stage("whoami") {
             steps {
                 sh 'whoami'
-                sh 'sudo chown'
             }
         }
 
@@ -18,11 +17,11 @@ pipeline {
             }
         }
 
-
-        stage("List all files"):{
+        stage:{
             steps{
-                sh 'ls -la'
-                sh 'whoami'
+                script{
+                    'ls -la'
+                }
             }
         }
         stage("Clear all running docker containers") {
