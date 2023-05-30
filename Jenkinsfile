@@ -4,6 +4,7 @@ pipeline {
         stage("whoami") {
             steps {
                 sh 'whoami'
+                sh 'sudo chown'
             }
         }
 
@@ -13,6 +14,15 @@ pipeline {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ec2-user@ec2-44-205-190-83.compute-1.amazonaws.com
                     '''
+                }
+            }
+        }
+
+        stage("List all files"):{
+            steps{
+                script{
+                    sh 'ls -la'
+                    sh 'whoami'
                 }
             }
         }
