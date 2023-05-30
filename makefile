@@ -15,8 +15,8 @@ APP_ROOT_NAME = laravel-docker-boilerplate
 USERNAME ?= $(shell bash -c 'read -p "Username: " username; echo $$username')
 PASSWORD ?= $(shell bash -c 'read -s -p "Password: " pwd; echo $$pwd')
 
-help: ## Print help.
-	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
+# help: ## Print help.
+# 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 ps:## See running containers
 	@docker ps
