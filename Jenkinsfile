@@ -20,6 +20,8 @@ pipeline {
         stage("List all files"){
             steps{
                  sh 'whoami'
+                 sh 'su ec2-user'
+                 sh 'whoami'
             }
         }
         stage("Clear all running docker containers") {
