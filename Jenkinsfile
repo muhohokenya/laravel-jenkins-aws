@@ -13,7 +13,7 @@ pipeline {
                 sshagent(credentials:['php-server-id']) {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ec2-user@44.205.190.83
-                        ls -la
+                        docker ps
                         docker-compose up -d
                     '''
             }
