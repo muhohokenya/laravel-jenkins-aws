@@ -17,14 +17,12 @@ pipeline {
                 }
             }
         }
-        
+
 
         stage("List all files"):{
             steps{
-                script{
-                    sh 'ls -la'
-                    sh 'whoami'
-                }
+                sh 'ls -la'
+                sh 'whoami'
             }
         }
         stage("Clear all running docker containers") {
