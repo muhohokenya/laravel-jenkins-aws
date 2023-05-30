@@ -79,7 +79,7 @@ services:
     working_dir: /var/www/html
     depends_on:
       - php
-    user: ${USER:-youruser}
+    user: ${USER:-ec2-user}
     entrypoint: ['composer', '--ignore-platform-reqs']
     networks:
       - laravel
