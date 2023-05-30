@@ -36,7 +36,7 @@ pipeline {
 
         stage("Start Docker") {
             steps {
-                sh 'sudo docker-compose ps'
+                sh 'sudo -s docker-compose ps'
             }
         }
         stage("Run Composer Install") {
