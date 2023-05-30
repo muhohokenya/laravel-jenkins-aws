@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Verify SSH connection to server") {
             steps {
-                sshagent(['aws']) {
+                sshagent(['phpwebserver']) {
                     sh '''
                         ssh -tt -o StrictHostKeyChecking=no ec2-user@44.205.190.83
                     '''
