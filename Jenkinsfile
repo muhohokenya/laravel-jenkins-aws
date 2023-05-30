@@ -14,6 +14,7 @@ pipeline {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ec2-user@44.205.190.83
                         ls -la
+                        make start
                     '''
             }
                 }
