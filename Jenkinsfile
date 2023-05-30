@@ -19,10 +19,7 @@ pipeline {
 
         stage("List all files"){
             steps{
-                script{
-                    sh 'ls -la'
-                    sh 'whoami'
-                }
+                 sh 'whoami'
             }
         }
         stage("Clear all running docker containers") {
@@ -36,7 +33,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Start Docker") {
             steps {
                 sh 'docker-compose ps'
