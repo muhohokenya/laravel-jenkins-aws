@@ -72,7 +72,7 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-        - USER=${USER:-youruser}
+        - USER=${USER:-ec2-user}
     container_name: composer
     volumes:
       - ./:/var/www/html
