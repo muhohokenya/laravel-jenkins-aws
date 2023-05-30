@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("W") {
             steps {
-                sh 'whomai'
+                sh 'whoami'
             }
         }
 
