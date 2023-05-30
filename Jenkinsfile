@@ -29,7 +29,6 @@ pipeline {
         }
         stage("Start Docker") {
             steps {
-                sh 'make up'
                 sh 'docker-compose ps'
             }
         }
