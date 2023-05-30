@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sshagent(credentials:['php-server-id']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ec2-user@ec2-44-205-190-83.compute-1.amazonaws.com
+                        ssh -o StrictHostKeyChecking=no ec2-user@44.205.190.83
                     '''
                 }
             }
@@ -19,8 +19,6 @@ pipeline {
 
         stage("List all files"){
             steps{
-                 sh 'whoami'
-                 sh 'sudo -E su ec2-user'
                  sh 'whoami'
             }
         }
