@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage("List all files"):{
+        stage("List all files"){
             steps{
                 script{
                     sh 'ls -la'
