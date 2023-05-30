@@ -17,9 +17,11 @@ pipeline {
             }
         }
 
+        //try build
+
         stage("List all files"){
             steps{
-                 sh 'whoami'
+                 sh 'cd '
             }
         }
         stage("Clear all running docker containers") {
