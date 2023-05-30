@@ -21,7 +21,7 @@ pipeline {
 
         stage("List all files"){
             steps{
-                 sh 'cd '
+                 sh 'docker ps'
             }
         }
         stage("Clear all running docker containers") {
