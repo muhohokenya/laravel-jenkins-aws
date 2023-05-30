@@ -6,6 +6,7 @@ pipeline {
                 sh 'whoami'
             }
         }
+        
 
         stage("Verify SSH connection to server") {
             steps {
