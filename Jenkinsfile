@@ -20,7 +20,7 @@ pipeline {
         stage("List all files"){
             steps{
                  sh 'whoami'
-                 sh 'su ec2-user'
+                 sh 'sudo -E su ec2-user'
                  sh 'whoami'
             }
         }
