@@ -9,7 +9,7 @@ pipeline {
 
         stage("Verify SSH connection to server") {
             steps {
-                sshagent(credentials:['aws']) {
+                sshagent(credentials:['php-server-id']) {
                     sh '''
                         ssh -o StrictHostKeyChecking=no ec2-user@ec2-44-205-190-83.compute-1.amazonaws.com
                     '''
