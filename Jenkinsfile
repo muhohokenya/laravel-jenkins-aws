@@ -17,10 +17,11 @@ pipeline {
             }
         }
 
-        stage:{
+        stage("List all files"):{
             steps{
                 script{
-                    'ls -la'
+                    sh 'ls -la'
+                    sh 'whoami'
                 }
             }
         }
