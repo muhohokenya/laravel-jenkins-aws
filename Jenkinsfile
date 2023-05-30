@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        sh 'sudo docker rm -f $(docker ps -a -q)'
+                        sh 'sudo -S docker rm -f $(docker ps -a -q)'
                     } catch (Exception e) {
                         echo 'No running container to clear up...'
                     }
